@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url(img/jkt.jfif);
+    background-size: cover;
+    background-position: center; */
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+
+nav,
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+}
+
+.logo a{
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-sign-up{
+    padding: 0.7rem 2rem;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-sign-up:hover{
+    background-color: white;
+    color: black;
+}
+
+.header-title{
+    margin: auto;
+    font-size: 5rem;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.today-date span{
+    font-size: 1rem;
+}
+
+.socmed{
+    display: flex;
+    list-style: none;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socmed li a{
+    color: white;
+}
+
+#about{
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.aboutcon{
+    width: 100%;
+    margin: auto auto;
+}
+
+.img-gallery{
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.img-box{
+    width: 22%;
+    height: 250px;
+    position: relative;
+}
+
+.img-box img{
+    width: 170px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 5px;
+
+}
+
+.img-box:nth-child(odd){
+    align-self: flex-end;
+}
+
+.img-box img:hover{
+    opacity: 0.5;
+}
+
+.jkt{
+    position: absolute;
+    bottom: -7%;
+    left: 50%;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.about-info{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+footer{
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 950px) {
+    .aboutcon{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .today-date {
+        display: none;
+    }
+
+    .socmed{
+        width: 100%;
+    }
+
+    .img-gallery{
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .img-box {
+        width: 500px;
+        height: 400px;
+        margin: 1rem 0;
+    }
+
+    .jkt{
+        display: none;
+    }
+}
